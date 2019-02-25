@@ -19,7 +19,7 @@ public class Tweet {
         tweet.uid = jsonObject.getLong("id");
         tweet.createdAt = jsonObject.getString("created_at");
         tweet.user = User.fromJson(jsonObject.getJSONObject("user"));
-        tweet.ts = TimeFormatter.getTimeDifference(TimeFormatter.getTimeStamp(tweet.createdAt));
+        tweet.ts = TimeFormatter.getTimeDifference(tweet.createdAt);
 
         return tweet;
     }
